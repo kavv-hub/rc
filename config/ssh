@@ -1,0 +1,27 @@
+Host github.com
+    HostName github.com
+    User git
+Host github-kavv
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/keys/id_kavv
+    IdentitiesOnly yes
+# github.com/monacohq
+Host gh-monacohq
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/keys/id_ed25519_monacohq
+    IdentitiesOnly yes
+Host *
+    UseKeychain yes
+
+Host avst-bastion
+  Hostname 34.219.122.87
+  User ec2-user
+Host avpro-bastion
+  Hostname 34.213.37.171
+  User ec2-user
+
+ControlPath ~/.ssh/sockets/%r@%h-%p
+ControlPersist 600
+
